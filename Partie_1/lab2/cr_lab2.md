@@ -12,3 +12,5 @@ git remote add origin https://github.com/Yan-GUO123/test1.git
 git pusg -u origin master
 git config credentieal.helper store
 git clone https://github.com/Yan-GUO123/test1.git
+
+test
