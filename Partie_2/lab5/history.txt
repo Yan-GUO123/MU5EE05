@@ -1,0 +1,25 @@
+ls -lrt // lister des fichiers, répertoires et la taille
+du 
+ls 
+stat Microsoft
+ls -lart // afficher des fichiers les plus anciens en premier
+ls -lS --block-size= kB  // taille plus petit en premier 
+cat answering-machine.txt  // lire le texte
+more answering-machine.txt  // lire chaque page
+nano answering-machine.txt
+tail -n 20  // afficher les 20 dernière lignes
+grep trust Microsoft  // chercher trust dans le texte
+find . -type f -exec grep-1 "money" {} +     // chercher money dans tous les textes
+grep -ri "money"  // chercher money et money
+mv . lihtbulb lightbulb    // modifier le nom de fichiers
+sudo find / -type d -name "lab3"   // trouver le chemin de lab3
+mv sardar3.txt /Bureau/MU5EE05/Partie_1/lab3   // remove sardar3.txt à lab3
+ln -s /sardar/*    // créer un symbolique
+rm sardar2.txt    // supprimer le texte
+chmod -r sardar1.txt   // modifier les droits d'écriture
+chmod +w sardar1.txt   // permet écriture
+chmod +r sardar1.txt   // permet lecture
+tar cvf lab4.tar lab4  // créer une archive
+bunzip2 -z lab4.tar    // compresser
+tar tvf lab4.tar.bz2   // afficher le contenu d'une archive
+mv lab4.tar.bz2 lab4   // déplacer à lab4
