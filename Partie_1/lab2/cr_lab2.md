@@ -2,7 +2,7 @@ sudo apt install git gitk git-email
 git config --global user.name "Yan"
 git config --global user.email "yguo35973@gmail.com"
 mkdir test
-cat>guo.txt
+cat>guo.txt  : pour créer un fichier
 hello M2 syscom
 git init
 git status
