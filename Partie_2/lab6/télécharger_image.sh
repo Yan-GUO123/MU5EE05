@@ -38,6 +38,3 @@ done
 
 # Affiche les images avec eog (utilise eog pour afficher)
 eog image_name
-
-  
-
