@@ -6,35 +6,31 @@ destination_folder="xkcd_images"
 # Créez le répertoire de destination s'il n'existe pas
 mkdir -p "$destination_folder"
 
+# Nombre d'images à télécharger
+num_images=10
+
 # Boucle pour télécharger les 10 premières images
-for i in {1..10}; do
+for i in $(seq 1 $num_images); do
   # URL de la page xkcd correspondante
   url="http://xkcd.com/$i"
 
-  # Télécharge la page web et extrait les lignes contenant "hotlinking"
-  page_content=$(curl -s "$url" | grep -E 'hotlinking')
+  var=$(wget -q -O - "$url" | grep -i hotlinking | grep -o 'https.*.jpg"' | grep -o 'https.*.jpg') 
+  echo $var
+  if [ -n "$var" ]; then
+    # Nom de l'image
+    image_name="xkcd_$i.jpg"
+    image_path="$destination_folder/$image_name"
 
-  if [ -n "$page_content" ]; then
-    # Utilise awk pour extraire l'URL de l'image
-    image_url=$(echo "$page_content" | awk -F'":"' '{print $2}' | sed 's/"//g')
+    # Télécharge l'image
+    wget -q "$var" -O "$image_path"
 
-    if [ -n "$image_url" ]; then
-      # Nom de l'image
-      image_name="xkcd_$i.png"
-      image_path="$destination_folder/$image_name"
-
-      # Télécharge l'image (utilise curl)
-      curl -s -o "$image_path" "$image_url"
-
-      # Affiche le nom de l'image téléchargée
-      echo "Téléchargement de l'image $i : $image_name"
-    else
-      echo "Impossible de trouver l'URL de l'image $i."
-    fi
+    # Affiche le nom de l'image téléchargée
+    echo "Téléchargement de l'image $i : $image_name"
   else
     echo "Impossible de trouver l'URL de l'image $i."
   fi
 done
 
-# Affiche les images avec eog (utilise eog pour afficher)
-eog image_name
+
+# Affiche les images avec eog
+eog "$destination_folder"/"xkcd_1.jpg"
