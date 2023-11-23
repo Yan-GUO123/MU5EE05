@@ -15,7 +15,7 @@ Q3&4 :   -E : gcc -E testmax.c -o testmax_preprocessed.c
 gcc : un compilateur 
 
 Q7&8 : meme principe que max
-Q9 : créé un fichier test.c et compile :gcc -g -o test test.c max.c min.c variance.c 
+Q9 : créé un fichier test.c et compile : gcc -g -o test test.c max.c min.c variance.c 
     exécuter le programme : python3 test.py
 
 

@@ -14,7 +14,7 @@ echo $PATH                 #  vérifier si opt est dans PATH
 
 Si on relanche un nouveau terminal, echo $PATH affiche pas comme avant
 
-nano ~/.bashrc     # ouvrir le fichier bashrc (un script permet d'ajouter ou modifier des variables environnement spécifiqueà l'utilisateur)
+nano ~/.bashrc     # ouvrir le fichier bashrc (un script permet d'ajouter ou modifier des variables environnement spécifique à l'utilisateur)
 
 export PATH=$PATH:/opt   # ajouter cette phrase à la fin de text de bashrc
 

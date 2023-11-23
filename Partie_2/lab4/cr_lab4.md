@@ -33,7 +33,6 @@ chmod +w sardar1.txt : permission écriture
 chmod +r sardar1.txt : permission de lecture
 
 tar cvf lab4.tar lab4  : créer une archive du lab4 est nommé lab4.tar
-
 bunzip2 -z lab4.tar : compresser
 tar tvf lab4.tar.bz2 : lister les fichiers d'une archive
 mv lab4.tar.bz2 lab4 : déplacer lab4.tar.bz2 à lab4
