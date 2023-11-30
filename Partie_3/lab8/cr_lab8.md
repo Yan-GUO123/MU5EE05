@@ -1,4 +1,4 @@
-Partie_1
+Partie_3
 
 Q1&2: créé des fichiers pour max.h, max.c, testmax.c, après on compile les fichiers "gcc -g -o testmax testmax.c max.c".(-g pour débugger le code). Après on exécute le programme : ./testmax 
 
