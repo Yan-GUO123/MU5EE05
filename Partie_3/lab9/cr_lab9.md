@@ -75,12 +75,3 @@ floor : plus petit
 
 21. gcc main.c var.c -I/opt/include -L/opt/lib -loutils -lm -o binaire :
 compiler le programme ( -lm : relier la bibliothèque de math)
-
-
-
-
-
-
-
-
-
