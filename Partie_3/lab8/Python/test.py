@@ -47,6 +47,3 @@ variance_val = variance(tableau)
 print("Maximum :", max_val)
 print("Minimum :", min_val)
 print("Variance :", variance_val)
-
-
-   

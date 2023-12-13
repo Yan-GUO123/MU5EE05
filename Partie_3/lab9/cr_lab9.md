@@ -1,5 +1,5 @@
 1. ar rcs liboutils.a max.o min.o  : 
-créer une bibliothèque statique liboutils.a avec les fichiers objes. 
+# créer une bibliothèque statique liboutils.a avec les fichiers objes. 
 ar : créer une archive liboutils.a    
 r : remplacer ou ajouter des fichiers à l'archive, 
 c : créer une archive. 
@@ -13,14 +13,14 @@ La commande ranlib est utilisée pour créer un index pour une archive statique.
 L'index est une table des symboles qui permet de rechercher des symboles (fonctions ou variables) dans l'archive plus rapide. 
 
 4. gcc main.c max.c min.c -o calcul :
-compiler le programme, nommer notre pragramme "calcul"
+# compiler le programme, nommer notre pragramme "calcul"
 
 5. ./calcul :
 exécuter le programme
 
 6. sudo mkdir /opt/include
 sudo mkdir /opt/lib :
-créent deux répertoires, "include" et "lib", dans le répertoire "/opt"
+# créent deux répertoires, "include" et "lib", dans le répertoire "/opt"
 
 7. ls /opt :
 vérifier que les répertoires ont été créés avec succè
@@ -46,7 +46,7 @@ supprimer les fichiers : .o max.c min.c
     -o binaire : Spécifie le nom du fichier binaire résultant.
 
 12. ./binaire :
-exécutez le programme
+# exécutez le programme
 
 13. gcc -c var.c -o var.o :
 créer le fichier var.o

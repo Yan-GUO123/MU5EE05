@@ -21,7 +21,7 @@ sudo mv libobjet.so /opt/lib/
 
 déplacer libobjet.so vers opt/lib
 
-ls /opt/lib : vérifier
+ls /opt/lib : vérifier 
 
 Q5 : 
 gcc -o executable main.c -I/opt/include -L/opt/lib -lobjet -lm

@@ -24,6 +24,3 @@ Partie_2
 Q1 : créé un fichier test.py
 
 Q2 : compile le programme et recevoir le fichier en binaire .pyc
-
-
-
