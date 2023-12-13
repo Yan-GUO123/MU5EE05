@@ -1,0 +1,42 @@
+CC = gcc
+OBJ = max.o min.o var.o test.o
+CFLAGS =
+DEBUG =
+
+ifeq (${DEBUG},YES)
+CFLAGS = -g -Wall
+install: My-binaire
+	cp My-binaire ${HOME} 
+My-binaire:  ${OBJ}
+	${CROSS_COMPILE}${CC} ${CFLAGS} -o $@ $^ -lm
+	echo "On est en mode debug"
+max.o: max.c
+	${CROSS_COMPILE}${CC} ${CFLAGS}   -c $< 
+min.o: min.c
+	${CROSS_COMPILE}${CC} ${CFLAGS}   -c $<   
+var.o: var.c
+	${CROSS_COMPILE}${CC} ${CFLAGS}   -c $<  
+test.o: test.c 
+	${CROSS_COMPILE}${CC} ${CFLAGS}   -c $<    
+clean:
+	rm -f  *.o My-binaire
+else
+CFLAGS =
+install: My-binaire
+	cp My-binaire ${HOME} 
+My-binaire:  ${OBJ}
+	${CROSS_COMPILE}${CC} ${CFLAGS}  -o $@ $^ -lm
+	echo " On est en mode release"  
+max.o: max.c
+	${CROSS_COMPILE}${CC} ${CFLAGS}   -c $< 
+min.o: min.c
+	${CROSS_COMPILE}${CC} ${CFLAGS}   -c $<   
+var.o: var.c
+	${CROSS_COMPILE}${CC} ${CFLAGS}   -c $<  
+test.o: test.c 
+	${CROSS_COMPILE}${CC} ${CFLAGS}   -c $<  
+	
+clean:
+	rm -f  *.o My-binaire
+	
+endif
