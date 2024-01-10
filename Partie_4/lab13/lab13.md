@@ -33,9 +33,9 @@ Active running s'affiche en vert
   sudo apt install openssh-client 
 20)
 pour etablir une connection sshb du pc vert la carte 
-ssh cyria@192.168.0.10
+ssh yan@192.168.0.10
   
-21)scp toto cyria@192.168.0.10:Desktop
+21)scp toto yan@192.168.0.10:Desktop
 pour transferer un fichier text
 
 Connection VNC : 
